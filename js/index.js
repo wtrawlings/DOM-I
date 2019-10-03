@@ -43,7 +43,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Try working on the nav bar first
 const newNav = document.querySelectorAll('a');
-newNav[0].textContent = "Services";
+newNav[0].textContent = siteContent["nav"]["nav-item-1"];
 newNav[1].textContent = "Product";
 newNav[2].textContent = "Vision";
 newNav[3].textContent = "Features";
@@ -86,3 +86,5 @@ console.log(greenNav2)
 //greenNav2.style.color = "green";
 greenNav2.forEach(item => item.style.color = 'green');
 //I can't see why this didn't work. The selection is correct. It is reading as undefined.
+newNav.forEach(item => item.style.color = 'green');
+//this worked because the selector was wrong- I was trying to to select something that wasn't there.
